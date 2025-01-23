@@ -7,47 +7,97 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body>
+<dibody>
 	<h2>정보처리기사 WAS 로그인 시스템 구현</h2>
 	<p>사용언어 : JAVA, Servlet, html, javascript, css, mybatis, mariadb</p>
 	<p>사용통합툴 : eclipse spring suite 4, VSC </p>
 	<div id="container">
-		<div class="sp" style="float: left">
-			<p><label>아 이 디</label><input type="text" /></p>
-			<p><label>비밀번호</label><input type="password" /></p>
-		</div>
-		<div style="float: left; margin-top: 1rem; margin-left: 1rem">
-			<button style="width: 6rem; height: 3.8rem">로그인</button>
+		<div id="signinContain">
+			<div class="sp" style="float: left">
+				<p><label>아 이 디</label><input type="text" id="mid" /></p>
+				<p><label>비밀번호</label><input type="password" id="mpw" /></p>
+			</div>
+			<div style="float: left; margin-top: 1rem; margin-left: 1rem">
+				<button id="signin" style=width:6rem; height:3.8rem>로그인</button>
+			</div>
 		</div>
 		<p class="sp" style="text-align: right; clear: both;">
-			<a href="signup.html">회원가입</a>
-			<a href="#">회원리스트보기</a>
+			<a id="memcontrol" href="signup.html">회원가입</a>
+			&nbsp;&nbsp;&nbsp;<a style="display: none" id="listview" href="#">회원리스트보기</a>
 		</p>
 	</div>
-</body>
-<script>
-	let colors = ["red", "green", "blue", "orange", "gray", "Beige", "BlueViolet", "DarkKhaki"];
-	// console.log(parseInt(Math.random()*8))
-	let r = parseInt(Math.random() * 8);
-	$(function () {
-		$("body").css("background-color", colors[r])
-	})
-</script>
-<style>
-	#container {
-		padding: 0.5rem;
-		width: 25rem;
-		height: 8rem;
-	}
+	<div id="listContain" style="display: none;"></div>
+	<hr>
+	<p>회원 리스트 연원: <span id="mcnt"></span></p>
+	<div id="listindex"></div>
+	</body>
+	</body>
+	<script>
+		let colors = ["red", "green", "blue", "orange", "gray", "Beige", "BlueViolet", "DarkKhaki"];
+		// console.log(parseInt(Math.random()*8))
+		let r = parseInt(Math.random() * 8);
+		$(function () {
+			$("body").css("background-color", colors[r])
+		})
+		//공통모듈분리대상
+		$("#signin").on("click", async () => {
+				// console.log($("#mid").val())
+				// console.log($("#mpw").val())
+				let data = await login($("#mid").val(), $("#mpw").val() )
+				
+				console.log(data)
+				if (data.message == "로그인 성공") {
+					$("#signinContain").html(`
+						${data.member.mid}(${data.member.name})님 로그인 하신 것을 환영합니다.
+					`);
+					$("#listview").css("display", "inline");
+					$("#memcontrol").attr("href", "/member/logout")
+						.text("로그아웃");
+				} else {
+					alert(data.message);
+				}
+			})
+		$("#listview").click(async () => {
+			const res = await fetch("/member/listview", {headers: {method: "get"}})
+			const data = await res.json();
+			console.log(data);
+			if (data.message == "리스트수신") {
+				console.log(data.members);
+				$("#mcnt").text(data.members.length);
+				const viewText = data.members.map((obj) => `<p style="border:1px solid gray; background: blak; color:white">아이디:${obj.mid}+나이:${obj.name}+주소:${obj.address}</p>`)
+				console.log(viewText)
+				$("#listindex").html(viewText.join(""));
+				$("#listContain").css("display", "block")
+			} else {
+				alert(data.message);
+			}
+		})
+		$("a").click(async function (evt) {
+			if ($(this).text() == "로그아웃") {
+				evt.preventDefault();
+				const res = await fetch($(this).attr("href"))
+				const data = await res.json();
+				alert(data.message)
+				location.href="/";
+				return false;
+			}
+		})
+	</script>
+	<style>
+		#container {
+			padding: 0.5rem;
+			width: 25rem;
+			height: 8rem;
+		}
 
-	p {
-		margin-bottom: 0.5rem
-	}
+		p {
+			margin-bottom: 0.5rem
+		}
 
-	label {
-		display: inline-block;
-		width: 6rem
-	}
-</style>
+		label {
+			display: inline-block;
+			width: 6rem
+		}
+	</style>
 
 </html>

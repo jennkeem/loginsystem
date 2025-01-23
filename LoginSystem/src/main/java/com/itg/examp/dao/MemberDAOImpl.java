@@ -23,6 +23,11 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 
 	public int signupMember(MemberDTO member) {
+		System.out.println(member.getMid());
+		System.out.println(member.getMpw());
+		System.out.println(member.getName());
+		System.out.println(member.getAddress());
+		System.out.println(member.getAge());
 		int res = session.insert("memberMapper.signup", member);
 		System.out.println("회원가입 DAO: " + res);
 		return res;
@@ -30,12 +35,14 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public MemberDTO signinMember(Map<String, String> data) {
-		return null;
+		MemberDTO member = session.selectOne("memberMapper.signin", data);
+		return member;
 	}
 
 	@Override
 	public List<MemberDTO> memberList() {
-		return null;
+		List<MemberDTO> ll = session.selectList("memberMapper.memberList");
+		return ll;
 	}
 
 }

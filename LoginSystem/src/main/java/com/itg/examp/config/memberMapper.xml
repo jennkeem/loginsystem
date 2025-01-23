@@ -5,7 +5,7 @@
 		INSERT INTO member VALUES
 		(null,#{mid},password(#{mpw}),#{name},#{age},#{address})
 	</insert>
-	<select id="memberinfo" parameterType="string" resultType="memb">
+	<select id="signin" parameterType="string" resultType="memb">
 		SELECT mid,name,age,address FROM member where mid=#{mid} and
 		mpw=password(#{mpw});
 	</select>

@@ -10,7 +10,7 @@
 
 <body>
 	<h2>로그인 시스템 회원 가입</h2>
-	<form action="/member/signup" method="post">
+	<form id="memform">
 		<fieldset>
 			<legend>회원정보입력</legend>
 			<p>
@@ -62,9 +62,11 @@
 					<option value="job">직장인</option>
 			</p>
 			<select>
+
 			</select>
 		</fieldset>
-		<p id="btn_contain"><input type="submit" value="회원가입">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<p id="btn_contain">
+			<input type="submit" value="회원가입">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="reset" value="다시입력">
 		</p>
 	</form>
@@ -86,5 +88,30 @@
 		text-align: center;
 	}
 </style>
+<script>
+	$("#memform").on("submit", async (evt) => { // async -> 비동기화
+		evt.preventDefault(); // 기본이벤트 제거
+		const payload = new FormData($("#memform")[0]) // UI 폼데이터 수집
+		console.log(payload) // 서버로의 데이터 전송
+		for (let key of payload.keys()) {
+			
+			console.log(key, ":", payload.get(key));
+		}
+		if (!payload.get("age")) {
+			payload.set("age", "100");
+		}
+		const res = await fetch("/member/signup", {method: "post", body: payload}); // promise 대기-서버응답시까지
+		const data = await res.json(); // 서버응답시  json 데이터로 수신
+		console.log(data);
+		if (data.message == "회원가입 성공") {
+			alert("회원가입이 성공하였습니다. 다시 로그인 해주세요.")
+			location.href = "/"
+		} else {
+			alert(data.message)
+		}
+
+		return false;
+	}) 
+</script>
 
 </html>

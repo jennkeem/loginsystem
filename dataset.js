@@ -26,7 +26,7 @@ class DataSet{
 
 let d1 = new DataSet("개발환경구축")//메인 타이틀 //메뉴번호
 d1.set_content("사용자의 로그인 기능을 구현하여 로그인 사용자와 비로그인 사용자에 제공 서비스를 구분한다.")//서브 타이틀
-d1.set_img(0,{imgtitle:"테스트용 이미지",imgurl:"https://drive.google.com/file/d/1utsoubAryRaUYXgah3xnOLgwRKnlr8G2/view?usp=drive_link",imglog:"테스트를 위해 이미지를 업로드 해보았습니다.",sourceurl:"https://docs.google.com/document/d/1rLabR8nPV8xUq-cWsl45f-7wItANbsMMI9mXfmoVzwU/edit?usp=drive_link"})//이미지타이틀
+d1.set_img(0,{imgtitle:"요구사항 명세서 작성",imgurl:"https://drive.google.com/file/d/1kXUNzXyEd3pHf_N24Ml1lMYutrexQ2cw/view?usp=drive_link",imglog:"테스트를 위해 이미지를 업로드 해보았습니다.",sourceurl:"https://docs.google.com/document/d/1rLabR8nPV8xUq-cWsl45f-7wItANbsMMI9mXfmoVzwU/edit?usp=drive_link"})//이미지타이틀
 
 
 d1.set_content("목표 시스템 개발을 위한 적정한 언어를 선정하고 라이선스와 향후 지원사항을 참고하여 결정한다.")
@@ -47,6 +47,7 @@ data_sets.push(d1)
 let d2 = new DataSet("공통모듈구현")//메인타이틀
 
 d2.set_content("공통모듈구현을 작성합니다.")//서브 타이틀
+d2.set_img(1,{imgtitle:"개발환경 구축 명세",imgurl:"https://drive.google.com/file/d/1mw6ZBtTbbZQYlfz1YQXCuTfoi-hnvfpg/view?usp=drive_link",imglog:"운영체제 및 개발에 필요한 환경을 고려하여 개발도구, 테스트도구, 빌드도구, 패키징도구, 형상관리도구등을 결정",sourceurl:"https://docs.google.com/document/d/1rNVbHnhYGoozaqX_RsD3cErmKYzGUMvba9ihxbP2CKk/edit?usp=drive_link"})//이미지타이틀
 d2.set_content("테스트케이스를 작성합니다.")
 d2.set_content("단위테스트를 작성합니다.")
 
