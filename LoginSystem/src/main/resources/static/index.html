@@ -51,8 +51,7 @@
 						${data.member.mid}(${data.member.name})님 로그인 하신 것을 환영합니다.
 					`);
 					$("#listview").css("display", "inline");
-					$("#memcontrol").attr("href", "/member/logout")
-						.text("로그아웃");
+					logout($("#memcontrol"))
 				} else {
 					alert(data.message);
 				}
