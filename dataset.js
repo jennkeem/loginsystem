@@ -86,8 +86,6 @@ d3.set_content("회원리스트연동")
 d3.set_img(3,{imgtitle:"회원리스트연동",imgurl:"https://drive.google.com/file/d/1Tj3ZAMsM4CeBU3UAb4RYp0ieAIj2LyuK/view?usp=drive_link", imglog: "회원 리스트 연원", sourceurl:""})//이미지타이틀
 d3.set_img(3,{imgtitle:"회원리스트연동",imgurl:"https://drive.google.com/file/d/1Esd4jONEZv5PMjIZb-xdUoQmdfpt72w5/view?usp=drive_link", imglog: "회원 목록 조회", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/java/com/itg/examp/MemberController.java"})//이미지타이틀
 d3.set_img(3,{imgtitle:"회원리스트연동",imgurl:"https://drive.google.com/file/d/1I2JEoNdy-uZLvnidWWstx0dBk62_U1Hp/view?usp=drive_link", imglog: "리스트 수신", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/index.html"})//이미지타이틀
-d3.set_img(3,{imgtitle:"회원리스트연동",imgurl:"", imglog: "공통모듈 구현", sourceurl:""})//이미지타이틀
-d3.set_img(3,{imgtitle:"회원리스트연동",imgurl:"", imglog: "공통모듈 구현", sourceurl:""})//이미지타이틀
 
 
 
@@ -96,10 +94,9 @@ data_sets.push(d3)
 
 // menu4 =============================================================
 let d4 = new DataSet("배치프로그램구현")//메인타이틀
-
 d4.set_content("배치스케줄구현")//서브타이틀
-
-d4.set_content("배치프로그램테스트 구현")
+d4.set_img(0,{imgtitle:"배치스케줄",imgurl:"https://drive.google.com/file/d/1k6DBLrI5PEDsx0L9efg-RHJ5udqz-fTr/view?usp=drive_link", imglog: "리스트 수신", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/index.html"})//이미지타이틀
+d4.set_img(0,{imgtitle:"배치스케줄",imgurl:"https://drive.google.com/file/d/1MWrc930POECXGU8sMZinXaUNfi1qFTDx/view?usp=drive_link", imglog: "배치", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/index.html"})//이미지타이틀
 
 d3.set_fill("사용자와 프로그램간에 인터렉티브한 로그인 세션 설정")//사용자 에필로그
 data_sets.push(d4)
