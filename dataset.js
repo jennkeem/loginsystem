@@ -48,8 +48,8 @@ data_sets.push(d1)
 let d2 = new DataSet("공통모듈구현")//메인타이틀
 
 d2.set_content("공통모듈구현")//서브 타이틀
-d2.set_img(0,{imgtitle:"공통모듈구현",imgurl:"https://drive.google.com/file/d/12BkzuBGDXQV7iHhkjTa0Y-6x82WBz9z7/view?usp=drive_link", imglog: "공통모듈 구현", sourceurl:"https://docs.google.com/document/d/1MnKKAKfeYhVEZW604kvKuXwMZhGykIww0bkO4GG3FK4/edit?usp=drive_link"})//이미지타이틀
-d2.set_img(0,{imgtitle:"공통 모듈 분리대상",imgurl:"https://drive.google.com/file/d/19pU7D1vZTsnUiNBFGkjHx4jDq46_Dnfh/view?usp=drive_link", imglog: "공통모듈 분리대상", sourceurl:"https://docs.google.com/document/d/1MnKKAKfeYhVEZW604kvKuXwMZhGykIww0bkO4GG3FK4/edit?usp=drive_link"})//이미지타이틀
+d2.set_img(0,{imgtitle:"공통모듈구현",imgurl:"https://drive.google.com/file/d/12BkzuBGDXQV7iHhkjTa0Y-6x82WBz9z7/view?usp=drive_link", imglog: "공통모듈 구현", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/newpage.html"})//이미지타이틀
+d2.set_img(0,{imgtitle:"공통 모듈 분리대상",imgurl:"https://drive.google.com/file/d/19pU7D1vZTsnUiNBFGkjHx4jDq46_Dnfh/view?usp=drive_link", imglog: "공통모듈 분리대상", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/newpage.html"})//이미지타이틀
 d2.set_content("테스트케이스")
 d2.set_img(1,{imgtitle:"개발언어선정",imgurl:"https://drive.google.com/file/d/12mATWYAsk2_t13bwMxUTbIpcVUQkLNvN/view?usp=drive_link",imglog:"자바언어기반 스프링프레임워크, html5, memberData file",sourceurl:"https://docs.google.com/document/d/1TgzcX9PAB-rhjfiBXmpoueaAdimE-Wd3_mTGUFF945g/edit?usp=drive_link"})//이미지타이틀
 d2.set_content("단위테스트")
@@ -63,11 +63,27 @@ data_sets.push(d2)
 // menu3 =============================================================
 let d3 = new DataSet("서버프로그램구현")//메인타이틀
 d3.set_content("회원가입구현")//서브타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1Tj3ZAMsM4CeBU3UAb4RYp0ieAIj2LyuK/view?usp=drive_link", imglog: "회원가입 첫 화면", sourceurl:""})//이미지타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1Iu4LG0QaJ80-KxMqtJPmK488EUH3Usxi/view?usp=drive_link", imglog: "첫번째 회원 입력하기", sourceurl:""})//이미지타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1F4tibjw7jFPWSmarTYWL1Dp11wKVm1t_/view?usp=drive_link", imglog: "두번째 회원 입력하기", sourceurl:""})//이미지타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1_2hQcUl_8chP4PEH1oV9clfpRejU687H/view?usp=drive_link", imglog: "회원가입 Form 코드", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/signup.html"})//이미지타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1EzLXhZJiSebGb31If5ZSSUAe0-D9P6fu/view?usp=drive_link", imglog: "회원가입 Form 코드", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/signup.html"})//이미지타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1TjlzMemUflC974_6zUGfnjUEvs0Ke1ms/view?usp=drive_link", imglog: "회원 서비스 코드", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/java/com/itg/examp/MemberService.java"})//이미지타이틀
+d3.set_img(0,{imgtitle:"회원가입구현",imgurl:"https://drive.google.com/file/d/1U73CF6Du1iLZcH5f-5zml26rxF0z_ZsX/view?usp=drive_link", imglog: "회원 로그인 시 확인", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/java/com/itg/examp/dao/MemberDAO.java"})//이미지타이틀
 d3.set_content("회원로그인구현")
+d3.set_img(1,{imgtitle:"회원로그인구현",imgurl:"https://drive.google.com/file/d/1_qE3sbqwVOkNnyMAhLtcmADKuLVgwHRw/view?usp=drive_link", imglog: "첫번째 회원 로그인 성공", sourceurl:""})//이미지타이틀
+d3.set_img(1,{imgtitle:"회원로그인구현",imgurl:"https://drive.google.com/file/d/10RE4kdNXxDxEKt_5XTU7FC79cggNTz0c/view?usp=drive_link", imglog: "두번째 회원 로그인 성공", sourceurl:""})//이미지타이틀
+d3.set_img(1,{imgtitle:"회원로그인구현",imgurl:"https://drive.google.com/file/d/1rdOWomdlBPLevyml4Wk0ZTah1YmauM_R/view?usp=drive_link", imglog: "회원가입 처리 쿼리", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/java/com/itg/examp/config/memberMapper.xml"})//이미지타이틀
+d3.set_img(1,{imgtitle:"회원로그인구현",imgurl:"", imglog: "공통모듈 구현", sourceurl:""})//이미지타이틀
+d3.set_img(1,{imgtitle:"회원로그인구현",imgurl:"", imglog: "공통모듈 구현", sourceurl:""})//이미지타이틀
+d3.set_content("회원로그아웃 구현")
+d3.set_img(2,{imgtitle:"회원 로그아웃",imgurl:"https://drive.google.com/file/d/1YJt5SFKwpkEbWtnxqJgSqLe4y5Cg_7A_/view?usp=drive_link", imglog: "첫번째 회원 로그아웃", sourceurl:""})//이미지타이틀
+d3.set_img(2,{imgtitle:"회원 로그아웃",imgurl:"https://drive.google.com/file/d/1o7Nw-cd75wvy4YrD55s3MbkaSDHXYpcY/view?usp=drive_link", imglog: "두번째 회원 로그아웃", sourceurl:""})//이미지타이틀
+d3.set_img(2,{imgtitle:"회원 로그아웃",imgurl:"https://drive.google.com/file/d/1lqxPegX4WuaJKlgquHh2CX6zz2Ca2ZhN/view?usp=drive_link", imglog: "로그아웃 UI 설정 및 처리", sourceurl:"https://github.com/jennkeem/loginsystem/blob/main/LoginSystem/src/main/resources/static/common.js"})//이미지타이틀
 d3.set_content("회원리스트연동")
-d3.set_content("테스트케이스 작성")
-d3.set_content("목오브젝트생성 및 테스트 구현")
-d3.set_content("결과보고서 작성")
+d3.set_img(3,{imgtitle:"회원리스트연동",imgurl:"", imglog: "공통모듈 구현", sourceurl:""})//이미지타이틀
+
+
 d3.set_fill("사용자와 프로그램간에 인터렉티브한 로그인 세션 설정")//사용자 에필로그
 data_sets.push(d3)
 
