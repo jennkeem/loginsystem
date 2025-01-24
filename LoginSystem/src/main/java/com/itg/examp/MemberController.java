@@ -81,11 +81,11 @@ public class MemberController {
 		return hm;
 	}
 
-	@GetMapping("/logout")
+	@GetMapping("/logout") // 로그아웃 요청 보내기.
 
 	public HashMap<String, Object> signout(HttpServletRequest request, HttpServletResponse response) {
-		HttpSession auth = request.getSession();
-		HashMap<String, Object> hm = new HashMap<>();
+		HttpSession auth = request.getSession(); // HttpServletRequest 세션 가져오고, 저장해줌.
+		HashMap<String, Object> hm = new HashMap<>(); // 로그아웃 후 반활할 메시지 HashMap 객체 생성.
 		hm.put("message", auth.getAttribute("mid")+ "님 로그아웃 되었습니다.");
 		auth.invalidate(); // 저장된 쿠키값을 무효화 한다.
 		// response.sendRedirect("/");
