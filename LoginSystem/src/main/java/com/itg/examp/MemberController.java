@@ -94,16 +94,16 @@ public class MemberController {
 
 	@GetMapping("/listview")
 
-	public Map listView(HttpServletRequest request) {
-		HttpSession auth = request.getSession();
-		HashMap<String, Object> hm = new HashMap<>();
+	public Map listView(HttpServletRequest request) { 
+		HttpSession auth = request.getSession(); // 현재 HTTP 요청에서 세션 가져오기.
+		HashMap<String, Object> hm = new HashMap<>(); // 클라이언트에게 반환될 데이터 저장
 		if (auth == null) {
-			hm.put("message", "로그인을 먼저 해주세요.");
+			hm.put("message", "로그인을 먼저 해주세요."); // 세션 없을 때 전달
 		} else {
-			List<MemberDTO> ll = dao.memberList();
+			List<MemberDTO> ll = dao.memberList(); // 로그인된 사용자의 경우, 회원 목록 가져옴.
 			System.out.println(auth.getAttribute("mid") + "님이 회원 리스트 요구");
-			hm.put("message", "리스트수신");
-			hm.put("members", ll);
+			hm.put("message", "리스트수신"); // 리스트 수신을 응답에 추가
+			hm.put("members", ll); // 응답데이터에 추가
 		}
 		return hm;
 	}

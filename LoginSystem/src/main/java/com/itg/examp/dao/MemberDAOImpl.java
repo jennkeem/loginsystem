@@ -40,7 +40,7 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
-	public List<MemberDTO> memberList() {
+	public List<MemberDTO> memberList() { // 데이터 전송 객체
 		List<MemberDTO> ll = session.selectList("memberMapper.memberList");
 		return ll;
 	}

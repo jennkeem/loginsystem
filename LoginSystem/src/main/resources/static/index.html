@@ -57,16 +57,19 @@
 			alert(data.message);
 		}
 	})
-	$("#listview").click(async () => {
+	
+	$("#listview").click(async () => { // jQuery 사용한 비동기 함수
 		const res = await fetch("/member/listview", {headers: {method: "get"}})
-		const data = await res.json();
+		// "/member/listview"-> Get 요청 보냄, await -> 서버 응답 기다리기.
+		const data = await res.json(); // JSON 형식으로 파싱
 		console.log(data);
 		if (data.message == "리스트수신") {
-			console.log(data.members);
+			console.log(data.members); // 회원 목록을 콘솔에 출력 후 확인.
 			$("#mcnt").text(data.members.length);
-			const viewText = data.members.map((obj) => `<p style="border:1px solid gray; background: blak; color:white">아이디:${obj.mid}+나이:${obj.name}+주소:${obj.address}</p>`)
+			const viewText = data.members.map((obj) => `<p style="border:1px solid gray; background: blak;
+			color:white">아이디:${obj.mid}+나이:${obj.name}+주소:${obj.address}</p>`)
 			console.log(viewText)
-			$("#listindex").html(viewText.join(""));
+			$("#listindex").html(viewText.join("")); // join("") -> 하나의 문자열로 결합
 			$("#listContain").css("display", "block")
 		} else {
 			alert(data.message);
