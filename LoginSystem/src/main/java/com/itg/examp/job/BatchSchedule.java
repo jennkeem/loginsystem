@@ -18,7 +18,7 @@ public class BatchSchedule {
 	@Autowired
 	private final JobLauncher jobLauncher = null;
 
-	@Scheduled(cron = "0 0/1 * * * * ?") // 스케줄 실행 어노테이션 // cron = "초 분 시 일 월 요일 년도"
+	@Scheduled(cron = "0 0/1 * * * *") // 스케줄 실행 어노테이션 // cron = "초 분 시 일 월 요일 년도"
 	public void runJob() {
 		 System.out.println("스케줄 실행 ===="); 
 		 try {
